@@ -25,7 +25,8 @@ const server = http.createServer(async (req, res) => {
         let html = response.data;
         const $ = cheerio.load(html);
         $('div.features div.row').each((i, elem) => {
-            if(i === parseInt(day)){
+            var no = parseInt(day) + 7 ;
+            if(i === no){
                 var result = $(elem).find('div.day_desc p').text().replace(/(\r\n|\n|\r)/gm, "");
                 data = {
                     no: i,
@@ -59,6 +60,13 @@ function getTitle(no){
         case 4: return "ကြာသပတေးနေ့ သားသမီးများ အတွက် တစ်ပတ်စာ ဟောစာတမ်း";
         case 5: return "သောကြာနေ့ သားသမီးများ အတွက် တစ်ပတ်စာ ဟောစာတမ်း";
         case 6: return "စနေနေ့ သားသမီးများ အတွက် တစ်ပတ်စာ ဟောစာတမ်း";
+        case 7: return "တနင်္ဂနွေနေ့ သားသမီးများ အတွက် တစ်ပတ်စာ ဟောစာတမ်း";
+        case 8: return "တနင်္လာနေ့ သားသမီးများ အတွက် တစ်ပတ်စာ ဟောစာတမ်း";
+        case 9: return "အင်္ဂါနေ့ သားသမီးများ အတွက် တစ်ပတ်စာ ဟောစာတမ်း";
+        case 10: return "ဗုဒ္ဓဟူးနေ့ သားသမီးများ အတွက် တစ်ပတ်စာ ဟောစာတမ်း";
+        case 11: return "ကြာသပတေးနေ့ သားသမီးများ အတွက် တစ်ပတ်စာ ဟောစာတမ်း";
+        case 12: return "သောကြာနေ့ သားသမီးများ အတွက် တစ်ပတ်စာ ဟောစာတမ်း";
+        case 13: return "စနေနေ့ သားသမီးများ အတွက် တစ်ပတ်စာ ဟောစာတမ်း";
     }
 }
 
