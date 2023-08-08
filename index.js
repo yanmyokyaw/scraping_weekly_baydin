@@ -2,7 +2,7 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 var http = require("http");
 var Rabbit = require("rabbit-node");
-const bayDinUrl = 'https://www.mintheinkha.com/weekly_baydin';
+const bayDinUrl = 'your badin url';
 var url = require('url');
 
 const server = http.createServer(async (req, res) => {
